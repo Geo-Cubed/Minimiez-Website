@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ui", "ui", "{FDE36E6C-11D8-4C50-8710-3F8A63754E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.SupermiezApi", "GeoCubed.Minimiez.SupermiezApi\GeoCubed.Minimiez.SupermiezApi.csproj", "{4A796972-FC47-49BC-BD69-BA01F265EB58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.SupermiezApi", "GeoCubed.Minimiez.SupermiezApi\GeoCubed.Minimiez.SupermiezApi.csproj", "{4A796972-FC47-49BC-BD69-BA01F265EB58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.Website", "GeoCubed.Minimiez.Website\GeoCubed.Minimiez.Website.csproj", "{533062B2-8FBF-4C39-978F-6E456C0B8878}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.Website", "GeoCubed.Minimiez.Website\GeoCubed.Minimiez.Website.csproj", "{533062B2-8FBF-4C39-978F-6E456C0B8878}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.Application", "GeoCubed.Minimiez.Application\GeoCubed.Minimiez.Application.csproj", "{4929F5F9-D010-4C0F-9450-0494C66B2FEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.Application", "GeoCubed.Minimiez.Application\GeoCubed.Minimiez.Application.csproj", "{4929F5F9-D010-4C0F-9450-0494C66B2FEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
