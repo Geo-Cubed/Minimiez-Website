@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B37BD7AB-56BF-4F73-B1DF-254B158226E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{27C3F9D5-F612-442C-A7E1-12007B15272F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{B21496FB-A79D-4588-AACB-22D9CC8103BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{0C6F03B3-B16A-4A08-B61E-1FD0E00DD858}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ui", "ui", "{FDE36E6C-11D8-4C50-8710-3F8A63754E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.SupermiezApi", "GeoCubed.Minimiez.SupermiezApi\GeoCubed.Minimiez.SupermiezApi.csproj", "{4A796972-FC47-49BC-BD69-BA01F265EB58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.Website", "GeoCubed.Minimiez.Website\GeoCubed.Minimiez.Website.csproj", "{533062B2-8FBF-4C39-978F-6E456C0B8878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.Application", "GeoCubed.Minimiez.Application\GeoCubed.Minimiez.Application.csproj", "{4929F5F9-D010-4C0F-9450-0494C66B2FEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A796972-FC47-49BC-BD69-BA01F265EB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A796972-FC47-49BC-BD69-BA01F265EB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A796972-FC47-49BC-BD69-BA01F265EB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A796972-FC47-49BC-BD69-BA01F265EB58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{533062B2-8FBF-4C39-978F-6E456C0B8878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{533062B2-8FBF-4C39-978F-6E456C0B8878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{533062B2-8FBF-4C39-978F-6E456C0B8878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{533062B2-8FBF-4C39-978F-6E456C0B8878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4929F5F9-D010-4C0F-9450-0494C66B2FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4929F5F9-D010-4C0F-9450-0494C66B2FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4929F5F9-D010-4C0F-9450-0494C66B2FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4929F5F9-D010-4C0F-9450-0494C66B2FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27C3F9D5-F612-442C-A7E1-12007B15272F} = {B37BD7AB-56BF-4F73-B1DF-254B158226E7}
+		{B21496FB-A79D-4588-AACB-22D9CC8103BC} = {B37BD7AB-56BF-4F73-B1DF-254B158226E7}
+		{0C6F03B3-B16A-4A08-B61E-1FD0E00DD858} = {B37BD7AB-56BF-4F73-B1DF-254B158226E7}
+		{FDE36E6C-11D8-4C50-8710-3F8A63754E63} = {B37BD7AB-56BF-4F73-B1DF-254B158226E7}
+		{4A796972-FC47-49BC-BD69-BA01F265EB58} = {27C3F9D5-F612-442C-A7E1-12007B15272F}
+		{533062B2-8FBF-4C39-978F-6E456C0B8878} = {FDE36E6C-11D8-4C50-8710-3F8A63754E63}
+		{4929F5F9-D010-4C0F-9450-0494C66B2FEB} = {B21496FB-A79D-4588-AACB-22D9CC8103BC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F776E7C-AB81-4697-8BC2-EC3F49AAC86E}
+	EndGlobalSection
+EndGlobal
