@@ -11,5 +11,8 @@ namespace GeoCubed.Minimiez.SupermiezApi.Controllers
     [ApiController]
     public class TeamsController : ControllerBase
     {
+        /* TODO: this is for getting the teams registered for the upcomming tourney
+         * -> GetTeams (get teams /w players and their checkin status)
+         */
     }
 }

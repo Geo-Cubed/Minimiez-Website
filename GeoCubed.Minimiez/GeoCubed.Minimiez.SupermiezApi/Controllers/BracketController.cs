@@ -11,5 +11,9 @@ namespace GeoCubed.Minimiez.SupermiezApi.Controllers
     [ApiController]
     public class BracketController : ControllerBase
     {
+        /* TODO: this is for the pap bracket, 
+         * will need methods for getting the data 
+         * -> Get Games
+         */
     }
 }

@@ -11,5 +11,9 @@ namespace GeoCubed.Minimiez.SupermiezApi.Controllers
     [ApiController]
     public class GroupsController : ControllerBase
     {
+        /* TODO: this is for the group stage matches.
+         * will need methods to get the group data
+         * -> Get groups (will get groups and win/loss/tb/score)
+         */
     }
 }
