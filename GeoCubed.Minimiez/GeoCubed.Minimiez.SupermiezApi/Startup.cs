@@ -1,16 +1,10 @@
+using GeoCubed.Minimiez.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.SupermiezApi
 {
@@ -26,11 +20,12 @@ namespace GeoCubed.Minimiez.SupermiezApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddApplicationServices();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GeoCubed.Minimiez.SupermiezApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SupermiezApi", Version = "v1" });
             });
         }
 
@@ -41,7 +36,7 @@ namespace GeoCubed.Minimiez.SupermiezApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GeoCubed.Minimiez.SupermiezApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SupermiezApi v1"));
             }
 
             app.UseHttpsRedirection();

@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.Website",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.Application", "GeoCubed.Minimiez.Application\GeoCubed.Minimiez.Application.csproj", "{4929F5F9-D010-4C0F-9450-0494C66B2FEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.Domain", "GeoCubed.Minimiez.Domain\GeoCubed.Minimiez.Domain.csproj", "{0E8798C3-7CBB-4F6F-A72A-AD544747A117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.Infrastructure", "GeoCubed.Minimiez.Infrastructure\GeoCubed.Minimiez.Infrastructure.csproj", "{1E6D18E6-E296-468C-9222-42924E4FB72F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{4929F5F9-D010-4C0F-9450-0494C66B2FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4929F5F9-D010-4C0F-9450-0494C66B2FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4929F5F9-D010-4C0F-9450-0494C66B2FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E8798C3-7CBB-4F6F-A72A-AD544747A117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E8798C3-7CBB-4F6F-A72A-AD544747A117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E8798C3-7CBB-4F6F-A72A-AD544747A117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E8798C3-7CBB-4F6F-A72A-AD544747A117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6D18E6-E296-468C-9222-42924E4FB72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6D18E6-E296-468C-9222-42924E4FB72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6D18E6-E296-468C-9222-42924E4FB72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6D18E6-E296-468C-9222-42924E4FB72F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +61,8 @@ Global
 		{4A796972-FC47-49BC-BD69-BA01F265EB58} = {27C3F9D5-F612-442C-A7E1-12007B15272F}
 		{533062B2-8FBF-4C39-978F-6E456C0B8878} = {FDE36E6C-11D8-4C50-8710-3F8A63754E63}
 		{4929F5F9-D010-4C0F-9450-0494C66B2FEB} = {B21496FB-A79D-4588-AACB-22D9CC8103BC}
+		{0E8798C3-7CBB-4F6F-A72A-AD544747A117} = {B21496FB-A79D-4588-AACB-22D9CC8103BC}
+		{1E6D18E6-E296-468C-9222-42924E4FB72F} = {0C6F03B3-B16A-4A08-B61E-1FD0E00DD858}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F776E7C-AB81-4697-8BC2-EC3F49AAC86E}

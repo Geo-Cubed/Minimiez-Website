@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GeoCubed.Minimiez.Application
+namespace GeoCubed.Minimiez.Domain
 {
     public class Class1
     {
