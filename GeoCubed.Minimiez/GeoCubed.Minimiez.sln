@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.Website",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.Application", "GeoCubed.Minimiez.Application\GeoCubed.Minimiez.Application.csproj", "{4929F5F9-D010-4C0F-9450-0494C66B2FEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.Domain", "GeoCubed.Minimiez.Domain\GeoCubed.Minimiez.Domain.csproj", "{0E8798C3-7CBB-4F6F-A72A-AD544747A117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.Domain", "GeoCubed.Minimiez.Domain\GeoCubed.Minimiez.Domain.csproj", "{0E8798C3-7CBB-4F6F-A72A-AD544747A117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoCubed.Minimiez.Infrastructure", "GeoCubed.Minimiez.Infrastructure\GeoCubed.Minimiez.Infrastructure.csproj", "{1E6D18E6-E296-468C-9222-42924E4FB72F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoCubed.Minimiez.Infrastructure", "GeoCubed.Minimiez.Infrastructure\GeoCubed.Minimiez.Infrastructure.csproj", "{1E6D18E6-E296-468C-9222-42924E4FB72F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
