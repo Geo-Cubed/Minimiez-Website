@@ -15,5 +15,8 @@ namespace GeoCubed.Minimiez.Website.Shared
 
         [Parameter]
         public string ClassStyle { get; set; }
+
+        [Parameter]
+        public string ExtraStyles { get; set; }
     }
 }

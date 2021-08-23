@@ -14,117 +14,118 @@ namespace GeoCubed.Minimiez.Website.Pages.Groups
         protected override async Task OnInitializedAsync()
         {
             // Get group data.
+            var rand = new Random();
             this.groups = new List<GroupsViewModel>()
             {
                 new GroupsViewModel()
                 {
-                    Name = "1",
+                    Name = "Pool 1",
                     GroupTeams = new List<GroupTeams>()
                     {
                         new GroupTeams()
                         {
                             TeamName = "Team 1",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         },
                         new GroupTeams()
                         {
                             TeamName = "Team 2",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         },
                         new GroupTeams()
                         {
                             TeamName = "Team 3",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         }
                     }
                 },
                 new GroupsViewModel()
                 {
-                    Name = "2",
+                    Name = "Pool 2",
                     GroupTeams = new List<GroupTeams>()
                     {
                         new GroupTeams()
                         {
                             TeamName = "Team 1",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         },
                         new GroupTeams()
                         {
                             TeamName = "Team 2",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         },
                         new GroupTeams()
                         {
                             TeamName = "Team 3",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         }
                     }
                 },
                 new GroupsViewModel()
                 {
-                    Name = "3",
+                    Name = "Pool 3",
                     GroupTeams = new List<GroupTeams>()
                     {
                         new GroupTeams()
                         {
                             TeamName = "Team 1",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         },
                         new GroupTeams()
                         {
                             TeamName = "Team 2",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         },
                         new GroupTeams()
                         {
                             TeamName = "Team 3",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         }
                     }
                 },
                 new GroupsViewModel()
                 {
-                    Name = "4",
+                    Name = "Pool 4",
                     GroupTeams = new List<GroupTeams>()
                     {
                         new GroupTeams()
                         {
                             TeamName = "Team 1",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         },
                         new GroupTeams()
                         {
                             TeamName = "Team 2",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         },
                         new GroupTeams()
                         {
                             TeamName = "Team 3",
-                            Wins = 1,
-                            Loses = 2,
-                            Score = 3
+                            Wins = rand.Next(0, 5),
+                            Loses = rand.Next(0, 5),
+                            Score = rand.Next(5, 25)
                         }
                     }
                 }
