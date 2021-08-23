@@ -6,11 +6,10 @@
     <div class="d-flex flex-wrap justify-content-center">
         @foreach (var group in groups)
         {
-            <Card>
-                <Headder>
-                    <h2>@group.Name</h2>
-                </Headder>
+            <Card ClassStyle="m-2">
                 <Body>
+                    <h2>@group.Name</h2>
+
                     @foreach(var team in group.GroupTeams)
                     {
                         <h3>@team.TeamName</h3>
