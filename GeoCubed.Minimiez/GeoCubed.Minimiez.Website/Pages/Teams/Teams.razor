@@ -2,4 +2,11 @@
 
 <div class="text-center">
     <h1>Teams</h1>
+
+    <div class="mt-4">
+        @foreach (var team in this.Participants.OrderByDescending(x => x.IsCheckedIn))
+        {
+            <!-- TODO: Colapsing cards hint - copy nav menu :) -->
+        }
+    </div>
 </div>
