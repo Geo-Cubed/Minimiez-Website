@@ -1,0 +1,33 @@
+﻿<div class="card @this.ClassStyle" style="@this.ExtraStyles">
+    <div class="card-header" @onclick="this.ToggleCollapsed">
+        <div class="d-flex flex-row">
+            <div><!--So the grow centers the headder :)--></div>
+            <div class="flex-grow-1">
+                @this.Header
+            </div>
+            @if (this.IsCollapsed)
+            {
+                <span class="oi oi-chevron-bottom"></span>
+            }
+            else
+            {
+                <span class="oi oi-chevron-top"></span>
+            }
+        </div>
+    </div>
+
+
+    @if (this.Body != null)
+    {
+        <div class="card-body @this.CollapsedStyle">
+            @this.Body
+        </div>
+    }
+
+    @if (this.Footer != null)
+    {
+        <div class="card-footer @this.CollapsedStyle">
+            @this.Footer
+        </div>
+    }
+</div>

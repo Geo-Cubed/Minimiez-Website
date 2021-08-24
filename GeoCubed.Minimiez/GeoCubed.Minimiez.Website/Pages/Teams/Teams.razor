@@ -6,7 +6,60 @@
     <div class="mt-4">
         @foreach (var team in this.Participants.OrderByDescending(x => x.IsCheckedIn))
         {
-            <!-- TODO: Colapsing cards hint - copy nav menu :) -->
+            <!-- TODO: if Team is checked in -->
+            <CollapsibleCard ClassStyle="mb-4" ExtraStyles="width:100%;">
+                <Header>
+                    <h4>@team.TeamName</h4>
+                </Header>
+                <Body>
+                    <div class="d-flex justify-content-center">
+                        <table class="table table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Checked In</th>
+                                    <th scope="col">Confirmed</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var player in team.Players.OrderByDescending(x => x.IsCaptain).ThenBy(x => x.IsConfirmed))
+                                {
+                                    <tr>
+                                        <th>
+                                            @if (player.IsCaptain)
+                                            {
+                                                <span class="oi oi-badge" data-toggle="tooltip" title="Captain"></span>
+                                            }
+                                        </th>
+                                        <td>@player.Name</td>
+                                        <td>
+                                            @if (player.IsCheckedIn)
+                                            {
+                                                <span class="oi oi-check"></span>
+                                            }
+                                            else
+                                            {
+                                                <span class="oi oi-x"></span>
+                                            }
+                                        </td>
+                                        <td>
+                                            @if (player.IsConfirmed)
+                                            {
+                                                <span class="oi oi-check"></span>
+                                            }
+                                            else
+                                            {
+                                                <span class="oi oi-x"></span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </Body>
+            </CollapsibleCard>
         }
     </div>
 </div>
