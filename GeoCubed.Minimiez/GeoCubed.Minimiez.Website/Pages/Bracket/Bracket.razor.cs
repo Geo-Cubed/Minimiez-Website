@@ -10,6 +10,13 @@ namespace GeoCubed.Minimiez.Website.Pages.Bracket
         protected override async Task OnInitializedAsync()
         {
             // Get bracket data.
+            /*
+             * one main object -- this will specify 
+             * List of rounds -- this will contain [Name] [Best of] 
+             * 
+             * 
+             * 
+             */
         }
     }
 }

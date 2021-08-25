@@ -3,44 +3,52 @@
 <div class="text-center">
     <h1 class="mb-4">Pools</h1>
     <!-- TODO: Fix pools tables for smaller screens -->
-    <div class="d-flex flex-wrap justify-content-center">
-        @foreach (var group in groups)
-        {
-            <Card ClassStyle="mb-4" ExtraStyles="width:100%">
-                <Body>
-                    <h2>@group.Name</h2>
+    @if (this.groups == null || !this.groups.Any())
+    {
+        <!-- TODO: Message if there is no group stage-->
+        <h2>The current tourney does not contain any pools.</h2>
+    }
+    else
+    {
+        <div class="d-flex flex-wrap justify-content-center">
+            @foreach (var group in groups)
+            {
+                <Card ClassStyle="mb-4" ExtraStyles="width:100%">
+                    <Body>
+                        <h2>@group.Name</h2>
 
-                    <div class="d-flex justify-content-center">
-                        <table class="table table-responsive-sm">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Team</th>
-                                    <th scope="col">Wins</th>
-                                    <th scope="col">Loses</th>
-                                    <th scope="col">Score</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach(var team in group.GroupTeams
-                                    .OrderByDescending(x => x.Wins)
-                                    .ThenBy(x => x.Loses)
-                                    .ThenByDescending(x => x.Score)
-                                    .Select((value, index) => new { value, index }))
-                                {
+                        <div class="d-flex justify-content-center">
+                            <table class="table table-responsive-sm">
+                                <thead>
                                     <tr>
-                                        <th scopr="row">@(team.index + 1)</th>
-                                        <td>@team.value.TeamName</td>
-                                        <td>@team.value.Wins</td>
-                                        <td>@team.value.Loses</td>
-                                        <td>@team.value.Score</td>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">Wins</th>
+                                        <th scope="col">Loses</th>
+                                        <th scope="col">Score</th>
                                     </tr>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                </Body>
-            </Card>
-        } 
-    </div>
+                                </thead>
+                                <tbody>
+                                    @foreach(var team in group.GroupTeams
+                                        .OrderByDescending(x => x.Wins)
+                                        .ThenBy(x => x.Loses)
+                                        .ThenByDescending(x => x.Score)
+                                        .Select((value, index) => new { value, index }))
+                                    {
+                                        <tr>
+                                            <th scopr="row">@(team.index + 1)</th>
+                                            <td>@team.value.TeamName</td>
+                                            <td>@team.value.Wins</td>
+                                            <td>@team.value.Loses</td>
+                                            <td>@team.value.Score</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </Body>
+                </Card>
+            } 
+        </div>
+    }
 </div>
