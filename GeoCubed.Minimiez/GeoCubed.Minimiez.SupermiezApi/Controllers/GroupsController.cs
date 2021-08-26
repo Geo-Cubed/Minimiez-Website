@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GeoCubed.Minimiez.Application.Features.Groups.GetGroups;
+using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.SupermiezApi.Controllers
@@ -11,9 +11,19 @@ namespace GeoCubed.Minimiez.SupermiezApi.Controllers
     [ApiController]
     public class GroupsController : ControllerBase
     {
-        /* TODO: this is for the group stage matches.
-         * will need methods to get the group data
-         * -> Get groups (will get groups and win/loss/tb/score)
-         */
+        private readonly IMediator _mediator;
+
+        public GroupsController(IMediator mediator)
+        {
+            this._mediator = mediator;
+        }
+
+        [HttpGet("all", Name = "GetAllGroups")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<List<GroupsVm>>> GetGroups()
+        {
+            var groups = await this._mediator.Send(new GetGroupsQuery());
+            return Ok(groups);
+        }
     }
 }
