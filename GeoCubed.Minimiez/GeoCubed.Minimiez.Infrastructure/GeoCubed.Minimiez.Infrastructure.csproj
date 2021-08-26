@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\GeoCubed.Minimiez.Application\GeoCubed.Minimiez.Application.csproj" />
   </ItemGroup>
 
 </Project>

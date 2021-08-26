@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.Application.Interfaces
 {
-    public interface IPlayerRepository : IAsyncRepository<object> // TODO: USE PLAYER ENTITY.
+    public interface IPlayerRepository : IAsyncRepository // TODO: USE PLAYER ENTITY.
     {
     }
 }

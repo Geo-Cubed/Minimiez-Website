@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
+using GeoCubed.Minimiez.Application.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -12,11 +11,12 @@ namespace GeoCubed.Minimiez.Application.Features.Groups.GetGroups
     public class GetGroupsQueryHandler : IRequestHandler<GetGroupsQuery, List<GroupsVm>>
     {
         private readonly IMapper _mapper;
-        //// private readonly IGroupRepository _groupRepository;
+        private readonly IGroupRepository _groupRepository;
 
-        public GetGroupsQueryHandler(IMapper mapper)
+        public GetGroupsQueryHandler(IMapper mapper, IGroupRepository groupRepository)
         {
             this._mapper = mapper;
+            this._groupRepository = groupRepository;
         }
 
         public async Task<List<GroupsVm>> Handle(GetGroupsQuery request, CancellationToken cancellationToken)
