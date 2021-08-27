@@ -1,26 +1,32 @@
 ﻿using GeoCubed.Minimiez.Application.Interfaces;
 using GeoCubed.Minimiez.Domain;
 using GeoCubed.Minimiez.Infrastructure.Common;
-using System;
+using GeoCubed.Minimiez.Infrastructure.DatabaseConnector;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.Infrastructure.Repositories
 {
     public class GroupRepository : BaseRepository, IGroupRepository
     {
-        public GroupRepository() : base()
+        public GroupRepository(IDatabaseConnector connector) : base(connector)
         {
-            // TODO: Dataabse connection stuff.
         }
+
         public Task<IReadOnlyList<Pools>> GetAllGroups()
         {
             var query = QueryHelper.SelectAllStatement(QueryHelper.Pools);
-
             var data = new List<Pools>();
-            // Get Data.
+            if (this._connector.TryOpenConnection())
+            {
+                var read = this._connector.SelectQuery(query);
+                while (read.Read())
+                {
+                    // TODO: Read data into list.
+                }
+
+                this._connector.TryCloseConnection();
+            }
 
             return Task.FromResult((IReadOnlyList<Pools>)data);
         }

@@ -1,8 +1,9 @@
 ﻿using GeoCubed.Minimiez.Application.Interfaces;
+using GeoCubed.Minimiez.Infrastructure.DatabaseConnector;
+using GeoCubed.Minimiez.Infrastructure.DatabaseConnector.SQLite;
 using GeoCubed.Minimiez.Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace GeoCubed.Minimiez.Infrastructure
 {
@@ -14,6 +15,7 @@ namespace GeoCubed.Minimiez.Infrastructure
             services.AddScoped<IGroupRepository, GroupRepository>();
             services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddScoped<IPlayerRepository, PlayerRepository>();
+            services.AddScoped<IDatabaseConnector>(x => new SQLiteDatabaseConnector(configuration.GetConnectionString("sqlite")));
 
             return services;
         }

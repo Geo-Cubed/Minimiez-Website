@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using GeoCubed.Minimiez.Domain;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.Application.Interfaces
 {
-    public interface ITeamRepository : IAsyncRepository // TODO: USE TEAM ENTITY.
+    public interface ITeamRepository : IAsyncRepository
     {
-        Task<IReadOnlyList<object>> GetAllTeamsWithPlayers();
+        Task<IReadOnlyList<Teams>> GetAllTeams();
     }
 }
