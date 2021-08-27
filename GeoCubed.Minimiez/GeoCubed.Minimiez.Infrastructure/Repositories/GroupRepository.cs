@@ -1,4 +1,6 @@
 ﻿using GeoCubed.Minimiez.Application.Interfaces;
+using GeoCubed.Minimiez.Domain;
+using GeoCubed.Minimiez.Infrastructure.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +15,14 @@ namespace GeoCubed.Minimiez.Infrastructure.Repositories
         {
             // TODO: Dataabse connection stuff.
         }
-        public Task<IReadOnlyList<object>> GetAllGroups()
+        public Task<IReadOnlyList<Pools>> GetAllGroups()
         {
-            throw new NotImplementedException();
+            var query = QueryHelper.SelectAllStatement(QueryHelper.Pools);
+
+            var data = new List<Pools>();
+            // Get Data.
+
+            return Task.FromResult((IReadOnlyList<Pools>)data);
         }
     }
 }

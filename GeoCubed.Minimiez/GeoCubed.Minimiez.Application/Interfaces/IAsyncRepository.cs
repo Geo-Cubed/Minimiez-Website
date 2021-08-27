@@ -5,7 +5,6 @@ namespace GeoCubed.Minimiez.Application.Interfaces
 {
     public interface IAsyncRepository
     { 
-        // TODO: Chenge to data reader object.
-        Task<object> ExecuteCommand(string sql, params object[]? parameters);
+        // TODO: Idk think of something this needs to do.
     }
 }

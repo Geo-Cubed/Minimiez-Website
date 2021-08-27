@@ -1,12 +1,11 @@
-﻿using System;
+﻿using GeoCubed.Minimiez.Domain;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.Application.Interfaces
 {
-    public interface IPlayerRepository : IAsyncRepository // TODO: USE PLAYER ENTITY.
+    public interface IPlayerRepository : IAsyncRepository
     {
+        Task<IReadOnlyList<Participants>> GetAllPlayers();
     }
 }

@@ -12,11 +12,9 @@ namespace GeoCubed.Minimiez.Infrastructure.Repositories
         public BaseRepository()
         {
             // TODO: Database Connection.
-        }
-
-        public Task<object> ExecuteCommand(string sql, params object[] parameters)
-        {
-            throw new NotImplementedException();
+            // General idea is to have an IDatabaseConnector that is passed in the constructor
+            // This connector will contain the logic to call the database, and means I can switch
+            // out for another if needed.
         }
     }
 }

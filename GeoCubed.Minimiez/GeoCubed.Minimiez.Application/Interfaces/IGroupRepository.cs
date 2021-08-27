@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using GeoCubed.Minimiez.Domain;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.Application.Interfaces
 {
-    public interface IGroupRepository : IAsyncRepository // TODO: USE GROUPS ENTITY.
+    public interface IGroupRepository : IAsyncRepository
     {
-        Task<IReadOnlyList<object>> GetAllGroups();
+        Task<IReadOnlyList<Pools>> GetAllGroups();
     }
 }

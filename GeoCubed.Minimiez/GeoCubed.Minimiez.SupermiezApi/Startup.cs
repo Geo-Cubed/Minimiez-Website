@@ -1,4 +1,5 @@
 using GeoCubed.Minimiez.Application;
+using GeoCubed.Minimiez.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +22,7 @@ namespace GeoCubed.Minimiez.SupermiezApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplicationServices();
+            services.AddInfrastructureServices(this.Configuration);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

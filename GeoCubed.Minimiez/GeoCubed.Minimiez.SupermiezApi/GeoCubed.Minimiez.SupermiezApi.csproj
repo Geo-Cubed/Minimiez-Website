@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GeoCubed.Minimiez.Application\GeoCubed.Minimiez.Application.csproj" />
+    <ProjectReference Include="..\GeoCubed.Minimiez.Infrastructure\GeoCubed.Minimiez.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
