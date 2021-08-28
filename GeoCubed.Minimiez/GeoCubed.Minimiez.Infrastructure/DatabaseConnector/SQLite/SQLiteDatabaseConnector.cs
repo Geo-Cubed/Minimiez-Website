@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.Common;
 using System.Data.SQLite;
+using System.Linq;
 
 namespace GeoCubed.Minimiez.Infrastructure.DatabaseConnector.SQLite
 {
@@ -23,9 +24,20 @@ namespace GeoCubed.Minimiez.Infrastructure.DatabaseConnector.SQLite
         /// </summary>
         /// <param name="query">The sql query to execute.</param>
         /// <param name="parameters">The parameters for the query.</param>
-        public void NonReturnQuery(string query, params object[] parameters)
+        public void NonReturnQuery(string query, params object?[] parameters)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(query.Trim()))
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+
+            var cmd = new SQLiteCommand(query, (SQLiteConnection)this._connection);
+            if (parameters != null && parameters.Any())
+            {
+                this.LoadParameters(ref cmd, parameters);
+            }
+
+            cmd.ExecuteNonQuery();
         }
 
         /// <summary>
@@ -34,9 +46,20 @@ namespace GeoCubed.Minimiez.Infrastructure.DatabaseConnector.SQLite
         /// <param name="query">The sql query to execute.</param>
         /// <param name="parameters">The Parameters for the query.</param>
         /// <returns>A <see cref="IDataReader"/> with the results set.</returns>
-        public IDataReader SelectQuery(string query, params object[] parameters)
+        public IDataReader SelectQuery(string query, params object?[] parameters)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(query.Trim()))
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+
+            var cmd = new SQLiteCommand(query, (SQLiteConnection)this._connection);
+            if (parameters != null && parameters.Any())
+            {
+                this.LoadParameters(ref cmd, parameters);
+            }
+
+            return cmd.ExecuteReader();
         }
 
         /// <summary>
@@ -78,6 +101,18 @@ namespace GeoCubed.Minimiez.Infrastructure.DatabaseConnector.SQLite
             }
 
             return result;
+        }
+        #endregion
+
+        #region Private Members
+        private void LoadParameters(ref SQLiteCommand command, params object[] parameters)
+        {
+            var counter = 1;
+            foreach (var item in parameters)
+            {
+                command.Parameters.Add(new SQLiteParameter($"@param_{counter}", item));
+                ++counter;
+            }
         }
         #endregion
     }

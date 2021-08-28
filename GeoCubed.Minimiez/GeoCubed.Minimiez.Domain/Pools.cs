@@ -4,9 +4,9 @@
     {
         public int Round { get; set; }
 
-        public string HomeTeamSeed { get; set; }
+        public int HomeTeamSeed { get; set; }
 
-        public string AwayTeamSeed { get; set; }
+        public int AwayTeamSeed { get; set; }
 
         public string Score { get; set; }
 
