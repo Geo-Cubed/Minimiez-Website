@@ -1,4 +1,4 @@
-﻿<div class="card @this.ClassStyle" style="@this.ExtraStyles">
+﻿<div class="card @this.ClassStyle" style="@this.ExtraStyles" @onclick="() => this.NavigateTo()">
     @if (this.Header != null)
     {
         <div class="card-header">

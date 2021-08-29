@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.Application.Interfaces
 {
-    public interface IPlayerRepository : IAsyncRepository
+    public interface IParticipantRepository : IAsyncRepository
     {
-        Task<IReadOnlyList<Participants>> GetAllPlayers();
+        Task<IReadOnlyList<Participants>> GetAllParticipants();
     }
 }

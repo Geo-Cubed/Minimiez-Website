@@ -37,6 +37,11 @@ a, .btn-link {
     background-color: white;
 }
 
+.clickableCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;

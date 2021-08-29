@@ -18,5 +18,19 @@ namespace GeoCubed.Minimiez.Website.Shared
 
         [Parameter]
         public string ExtraStyles { get; set; }
+
+        [Parameter]
+        public string ClickUrl { get; set; }
+
+        [Inject]
+        private NavigationManager Navigation { get; set; }
+
+        protected void NavigateTo()
+        {
+            if (!string.IsNullOrEmpty(this.ClickUrl))
+            {
+                this.Navigation.NavigateTo(this.ClickUrl);
+            }
+        }
     }
 }

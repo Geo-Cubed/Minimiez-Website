@@ -14,7 +14,7 @@ namespace GeoCubed.Minimiez.Infrastructure
             services.AddScoped<IAsyncRepository, BaseRepository>();
             services.AddScoped<IGroupRepository, GroupRepository>();
             services.AddScoped<ITeamRepository, TeamRepository>();
-            services.AddScoped<IPlayerRepository, PlayerRepository>();
+            services.AddScoped<IParticipantRepository, PlayerRepository>();
             services.AddScoped<IDatabaseConnector>(x => new SQLiteDatabaseConnector(configuration.GetConnectionString("sqlite")));
 
             return services;

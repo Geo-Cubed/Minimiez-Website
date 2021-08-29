@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace GeoCubed.Minimiez.Infrastructure.Repositories
 {
-    public class PlayerRepository : BaseRepository, IPlayerRepository
+    public class PlayerRepository : BaseRepository, IParticipantRepository
     {
         public PlayerRepository(IDatabaseConnector connector) : base(connector)
         {
         }
 
-        public Task<IReadOnlyList<Participants>> GetAllPlayers()
+        public Task<IReadOnlyList<Participants>> GetAllParticipants()
         {
             var query = QueryHelper.SelectAllStatement(QueryHelper.Participants);
             var participants = new List<Participants>();
